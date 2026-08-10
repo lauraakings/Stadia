@@ -549,8 +549,19 @@ button {
   padding-top: 0.55rem;
 }
 
+.places__lede:not(.places__lede--dark) {
+  color: var(--ink);
+  background: var(--red);
+  padding-top: clamp(84px, 11vw, 160px);
+  padding-bottom: clamp(84px, 11vw, 160px);
+}
+
+.places__lede:not(.places__lede--dark) .degree {
+  color: var(--paper-light);
+}
+
 .places__lede--dark {
-  margin-top: clamp(56px, 7vw, 112px);
+  margin-top: 0;
   padding-top: clamp(84px, 11vw, 160px);
   padding-bottom: clamp(84px, 11vw, 160px);
   color: var(--paper-light);
