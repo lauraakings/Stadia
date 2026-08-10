@@ -1,0 +1,17 @@
+{
+  "name": "STADIA° WHERE",
+  "short_name": "STADIA°",
+  "description": "Premium T-shirts built around the coordinates of football's most meaningful places.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ececea",
+  "theme_color": "#ececea",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
