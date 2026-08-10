@@ -536,22 +536,70 @@ button {
   background: var(--paper);
 }
 
-.places__intro {
+.places__lede {
   display: grid;
   padding-top: var(--section-space);
-  padding-bottom: clamp(24px, 3vw, 48px);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-bottom: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(130px, 1.3fr) minmax(0, 4.35fr) minmax(0, 4.35fr);
   gap: 36px;
 }
 
-.places__intro .section-label {
+.places__lede .section-label {
   grid-column: 1 / -1;
   padding-top: 0.55rem;
 }
 
-.places #places-title {
+.places__lede--dark {
+  margin-top: clamp(56px, 7vw, 112px);
+  padding-top: clamp(84px, 11vw, 160px);
+  padding-bottom: clamp(84px, 11vw, 160px);
+  color: var(--paper-light);
+  background: var(--ink);
+}
+
+.places__lede--dark .places__eyebrow,
+.places__lede--dark .places__heading-copy {
+  color: rgba(246, 245, 242, 0.82);
+}
+
+.places__intro {
+  display: grid;
+  padding-top: clamp(36px, 5vw, 72px);
+  padding-bottom: clamp(24px, 3vw, 48px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  align-items: end;
+}
+
+.places__heading {
+  display: grid;
   grid-column: 2 / 4;
+  gap: 16px;
   max-width: none;
+  justify-items: start;
+  text-align: left;
+}
+
+.places__eyebrow {
+  margin: 0;
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.places #places-title {
+  max-width: none;
+  margin: 0;
+}
+
+.places__heading-copy {
+  max-width: 22ch;
+  margin: 0;
+  font-size: clamp(1.15rem, 1.75vw, 2rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
 }
 
 .places__intro-copy {
@@ -586,7 +634,6 @@ button {
   grid-column: 1 / 3;
   grid-template-columns: 1fr;
   gap: 0;
-  margin-top: clamp(20px, 3.2vw, 40px);
   margin-bottom: clamp(24px, 3vw, 44px);
   margin-right: 0;
   padding-right: 0;
@@ -627,7 +674,7 @@ button {
 }
 
 .places__search-empty {
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
   margin: 18px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
@@ -638,7 +685,6 @@ button {
   grid-column: 3;
   align-content: start;
   gap: 10px;
-  margin-top: clamp(20px, 3.2vw, 40px);
   margin-bottom: clamp(24px, 3vw, 44px);
 }
 
@@ -1452,7 +1498,16 @@ button {
     gap: 44px;
   }
 
+  .places__lede {
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
   .places #places-title {
+    grid-column: auto;
+  }
+
+  .places__heading {
     grid-column: auto;
   }
 
