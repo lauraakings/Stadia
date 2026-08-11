@@ -536,6 +536,14 @@ button {
   background: var(--paper);
 }
 
+.places__band--red {
+  background: var(--red);
+}
+
+.places__band--dark {
+  background: var(--ink);
+}
+
 .places__lede {
   display: grid;
   padding-top: var(--section-space);
@@ -551,7 +559,6 @@ button {
 
 .places__lede:not(.places__lede--dark) {
   color: var(--ink);
-  background: var(--red);
   padding-top: clamp(84px, 11vw, 160px);
   padding-bottom: clamp(84px, 11vw, 160px);
 }
@@ -565,7 +572,6 @@ button {
   padding-top: clamp(84px, 11vw, 160px);
   padding-bottom: clamp(84px, 11vw, 160px);
   color: var(--paper-light);
-  background: var(--ink);
 }
 
 .places__lede--dark .places__eyebrow,
