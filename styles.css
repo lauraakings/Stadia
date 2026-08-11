@@ -776,6 +776,14 @@ button {
   transition: transform 1500ms var(--ease-out);
 }
 
+.place-story__media[data-mobile-shirt-toggle] > .place-story__desktop-media {
+  display: block;
+}
+
+.mobile-shirt-toggle {
+  display: none;
+}
+
 .place-story__media.is-visible img {
   transform: scale(1);
 }
@@ -1806,6 +1814,63 @@ button {
   .js [data-reveal] {
     opacity: 1;
     transform: none;
+  }
+
+  .mobile-shirt-toggle__layer {
+    transition-duration: 0ms;
+  }
+}
+
+@media (max-width: 768px) {
+  .place-story__media[data-mobile-shirt-toggle] {
+    aspect-ratio: 4 / 5;
+  }
+
+  .place-story__media[data-mobile-shirt-toggle] > .place-story__desktop-media {
+    display: none;
+  }
+
+  .place-story__media[data-mobile-shirt-toggle] > .mobile-shirt-toggle {
+    display: block;
+  }
+
+  .mobile-shirt-toggle {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    appearance: none;
+  }
+
+  .mobile-shirt-toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+  }
+
+  .mobile-shirt-toggle__layer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+    pointer-events: none;
+  }
+
+  .mobile-shirt-toggle__layer.is-visible {
+    opacity: 1;
+  }
+
+  .mobile-shirt-toggle__layer--front {
+    opacity: 1;
   }
 }
 

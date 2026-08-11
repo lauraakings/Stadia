@@ -9,6 +9,7 @@
   const navLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const desktopNav = window.matchMedia('(min-width: 901px)');
+  const mobileShirtMedia = window.matchMedia('(max-width: 768px)');
 
   let menuOpen = false;
   let lastFocusedElement = null;
@@ -169,6 +170,115 @@
   const placesSearchEmpty = document.querySelector('[data-places-search-empty]');
   const placesFilters = [...document.querySelectorAll('[data-places-filter]')];
 
+  const setMobileShirtState = (toggle, side) => {
+    const front = toggle.querySelector('[data-mobile-shirt-layer="front"]');
+    const back = toggle.querySelector('[data-mobile-shirt-layer="back"]');
+    const button = toggle.querySelector('[data-mobile-shirt-button]');
+
+    if (!front || !back || !button) return;
+
+    const isBackVisible = side === 'back';
+    toggle.dataset.mobileShirtSide = side;
+
+    front.classList.toggle('is-visible', !isBackVisible);
+    back.classList.toggle('is-visible', isBackVisible);
+    front.setAttribute('aria-hidden', isBackVisible ? 'true' : 'false');
+    back.setAttribute('aria-hidden', isBackVisible ? 'false' : 'true');
+    button.setAttribute(
+      'aria-label',
+      isBackVisible ? `Show front of ${toggle.dataset.mobileShirtGround} T-shirt` : `Show back of ${toggle.dataset.mobileShirtGround} T-shirt`
+    );
+    button.setAttribute('aria-pressed', isBackVisible ? 'true' : 'false');
+  };
+
+  const buildMobileShirtToggle = (shirt) => {
+    const ground = escapeHtml(shirt.ground);
+    const front = escapeHtml(shirt.mobileImages.front);
+    const back = escapeHtml(shirt.mobileImages.back);
+
+    return `
+      <button
+        class="mobile-shirt-toggle"
+        type="button"
+        data-mobile-shirt-button
+        aria-label="Show back of ${ground} T-shirt"
+        aria-pressed="false"
+      >
+        <img
+          class="mobile-shirt-toggle__layer mobile-shirt-toggle__layer--front is-visible"
+          src="${front}"
+          alt="${ground} T-shirt front view"
+          loading="eager"
+          decoding="async"
+          data-mobile-shirt-layer="front"
+        >
+        <img
+          class="mobile-shirt-toggle__layer mobile-shirt-toggle__layer--back"
+          src="${back}"
+          alt="${ground} T-shirt back view"
+          loading="eager"
+          decoding="async"
+          data-mobile-shirt-layer="back"
+          aria-hidden="true"
+        >
+      </button>`;
+  };
+
+  const setupMobileShirtToggles = () => {
+    const toggles = [...document.querySelectorAll('[data-mobile-shirt-toggle]')];
+
+    toggles.forEach((toggle) => {
+      const button = toggle.querySelector('[data-mobile-shirt-button]');
+      const front = toggle.querySelector('[data-mobile-shirt-layer="front"]');
+      const back = toggle.querySelector('[data-mobile-shirt-layer="back"]');
+
+      if (!button || !front || !back) return;
+
+      toggle.dataset.mobileShirtSide = toggle.dataset.mobileShirtSide || 'front';
+      setMobileShirtState(toggle, 'front');
+
+      let pointerStartX = 0;
+      let pointerStartY = 0;
+      let pointerMoved = false;
+      let suppressClick = false;
+
+      button.addEventListener('pointerdown', (event) => {
+        if (event.pointerType !== 'touch') return;
+        pointerStartX = event.clientX;
+        pointerStartY = event.clientY;
+        pointerMoved = false;
+      });
+
+      button.addEventListener('pointermove', (event) => {
+        if (event.pointerType !== 'touch' || pointerMoved) return;
+        const deltaX = Math.abs(event.clientX - pointerStartX);
+        const deltaY = Math.abs(event.clientY - pointerStartY);
+        if (deltaX > 10 || deltaY > 10) {
+          pointerMoved = true;
+        }
+      });
+
+      button.addEventListener('pointerup', (event) => {
+        if (event.pointerType !== 'touch' || pointerMoved) return;
+
+        const nextSide = (toggle.dataset.mobileShirtSide || 'front') === 'front' ? 'back' : 'front';
+        setMobileShirtState(toggle, nextSide);
+        suppressClick = true;
+      });
+
+      button.addEventListener('click', (event) => {
+        if (suppressClick) {
+          suppressClick = false;
+          event.preventDefault();
+          return;
+        }
+
+        const nextSide = (toggle.dataset.mobileShirtSide || 'front') === 'front' ? 'back' : 'front';
+        setMobileShirtState(toggle, nextSide);
+      });
+    });
+  };
+
   const shirts = [
     {
       collection: 'current',
@@ -185,6 +295,10 @@
       collection: 'current',
       ground: 'Anfield',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Anfield.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Anfield_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Anfield_back.png'
+      },
       coordinates: '53°25\'51"N - 2°57\'39"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -542,13 +656,18 @@
         const swatches = shirt.colours
           .map((colour) => `<span class="place-story__swatch--${escapeHtml(colour.swatch)}" aria-hidden="true"></span>`)
           .join('');
+        const hasMobileShirtToggle = Boolean(shirt.mobileImages);
+        const desktopMediaMarkup = `
+          <picture class="place-story__desktop-media">
+            <img src="${escapeHtml(shirt.image)}" alt="${escapeHtml(shirt.ground)} STADIA T-shirt shown from the front and back." loading="${loading}" decoding="async"${fetchPriority}>
+          </picture>`;
+        const mobileMediaMarkup = hasMobileShirtToggle ? buildMobileShirtToggle(shirt) : '';
 
         return `
         <article class="place-story" aria-labelledby="${groundId}" data-place-card data-collection="${escapeHtml(shirt.collection)}">
-          <figure class="place-story__media is-visible">
-            <picture>
-              <img src="${escapeHtml(shirt.image)}" alt="${escapeHtml(shirt.ground)} STADIA T-shirt shown from the front and back." loading="${loading}" decoding="async"${fetchPriority}>
-            </picture>
+          <figure class="place-story__media is-visible"${hasMobileShirtToggle ? ` data-mobile-shirt-toggle data-mobile-shirt-ground="${escapeHtml(shirt.ground)}" data-mobile-shirt-side="front"` : ''}>
+            ${desktopMediaMarkup}
+            ${mobileMediaMarkup}
           </figure>
           <div class="section-shell place-story__caption">
             <div>
@@ -564,6 +683,8 @@
     if (placesSearchEmpty) {
       placesSearchEmpty.hidden = visibleShirts.length !== 0;
     }
+
+    setupMobileShirtToggles();
   };
 
   if (placesFilters.length) {
@@ -595,6 +716,12 @@
 
   setFilterState();
   renderPlaces();
+
+  if (mobileShirtMedia.addEventListener) {
+    mobileShirtMedia.addEventListener('change', renderPlaces);
+  } else if (mobileShirtMedia.addListener) {
+    mobileShirtMedia.addListener(renderPlaces);
+  }
 
   if (!reduceMotion.matches) {
     let ticking = false;
