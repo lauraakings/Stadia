@@ -284,6 +284,10 @@
       collection: 'current',
       ground: 'Amex Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Amex_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Amex_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Amex_Stadium_back.png'
+      },
       coordinates: '50°51\'43"N - 0°05\'13"W',
       colours: [
         { label: 'Royal Blue', swatch: 'royal' },
@@ -310,6 +314,10 @@
       collection: 'current',
       ground: 'CBS Arena',
       image: 'assets/T-Shirts/Contemporary%20Grounds/CBS_Arena.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/CBS_Arena_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/CBS_Arena_back.png'
+      },
       coordinates: '52°26\'40"N - 1°29\'06"W',
       colours: [
         { label: 'Sky Blue', swatch: 'sky' },
@@ -321,6 +329,10 @@
       collection: 'current',
       ground: 'City Ground',
       image: 'assets/T-Shirts/Contemporary%20Grounds/City_Ground.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/City_Ground_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/City_Ground_back.png'
+      },
       coordinates: '52°56\'24"N - 1°07\'44"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -332,6 +344,10 @@
       collection: 'current',
       ground: 'Elland Road',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Elland_Road.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Elland_Road_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Elland_Road_back.png'
+      },
       coordinates: '53°46\'40"N - 1°34\'20"W',
       colours: [
         { label: 'White', swatch: 'white' },
@@ -343,6 +359,10 @@
       collection: 'current',
       ground: 'Etihad Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Etihad_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Etihad_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Etihad_Stadium_back.png'
+      },
       coordinates: '53°28\'59"N - 2°12\'01"W',
       colours: [
         { label: 'Sky Blue', swatch: 'sky' },
@@ -354,6 +374,10 @@
       collection: 'current',
       ground: 'GTech Community Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/GTech_Community_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/GTech_Company_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/GTech_Company_Stadium_back.png'
+      },
       coordinates: '51°29\'53"N - 0°17\'10"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -365,6 +389,10 @@
       collection: 'current',
       ground: 'Hill Dickinson Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Hill_Dickinson.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Hill_Dickinson_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Hill_Dickinson_back.png'
+      },
       coordinates: '53°26\'24"N - 2°59\'14"W',
       colours: [
         { label: 'Royal Blue', swatch: 'royal' },
@@ -376,6 +404,10 @@
       collection: 'current',
       ground: 'London Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/London_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/London_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/London_Stadium_back.png'
+      },
       coordinates: '51°32\'19"N - 0°01\'00"W',
       colours: [
         { label: 'Claret', swatch: 'claret' },
@@ -387,6 +419,10 @@
       collection: 'current',
       ground: 'MKM Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/MKM_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/MKM_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/MKM_Stadium_back.png'
+      },
       coordinates: '53°44\'31"N - 0°22\'12"W',
       colours: [
         { label: 'Amber', swatch: 'amber' },
@@ -398,6 +434,10 @@
       collection: 'current',
       ground: 'Old Trafford',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Old_Trafford.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Old_Trafford_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Old_Trafford_back.png'
+      },
       coordinates: '53°27\'47"N - 2°17\'28"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -409,6 +449,10 @@
       collection: 'current',
       ground: 'Portman Road',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Portman_Road.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Portman_Road_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Portman_Road_back.png'
+      },
       coordinates: '52°03\'25"N - 1°08\'43"E',
       colours: [
         { label: 'Royal Blue', swatch: 'royal' },
@@ -420,6 +464,10 @@
       collection: 'current',
       ground: 'Selhurst Park',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Selhurst_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Selhurst_Park_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Selhurst_Park_back.png'
+      },
       coordinates: '51°23\'54"N - 0°05\'09"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -431,6 +479,10 @@
       collection: 'current',
       ground: "St.James' Park",
       image: "assets/T-Shirts/Contemporary%20Grounds/St.James'_Park.png",
+      mobileImages: {
+        front: "assets/T-Shirts/Single/Contemporary/St.James'_Park_front.png",
+        back: "assets/T-Shirts/Single/Contemporary/St.James'_Park_back.png"
+      },
       coordinates: '54°58\'32"N - 1°37\'18"W',
       colours: [
         { label: 'Black', swatch: 'black' },
@@ -442,6 +494,10 @@
       collection: 'current',
       ground: 'Stadium of Light',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Stadium_of_Light.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Stadium_of_Light_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Stadium_of_Light_back.png'
+      },
       coordinates: '54°54\'55"N - 1°23\'13"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -453,6 +509,10 @@
       collection: 'current',
       ground: 'Stamford Bridge',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Stamford_Bridge.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Stamford_Bridge_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Stamford_Bridge_back.png'
+      },
       coordinates: '51°28\'54"N - 0°11\'28"W',
       colours: [
         { label: 'Royal Blue', swatch: 'royal' },
@@ -464,6 +524,10 @@
       collection: 'current',
       ground: 'The Emirates',
       image: 'assets/T-Shirts/Contemporary%20Grounds/The_Emirates.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/The_Emirates_Front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/The_Emirates_back.png'
+      },
       coordinates: '51°33\'18"N - 0°06\'32"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -475,6 +539,10 @@
       collection: 'current',
       ground: 'Tottenham Hotspur Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Tottenham_Hotspur_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Tottenham_Hotspur_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Tottenham_Hotspur_Stadium_back.png'
+      },
       coordinates: '51°36\'14"N - 0°03\'58"W',
       colours: [
         { label: 'Navy', swatch: 'navy' },
@@ -486,6 +554,10 @@
       collection: 'current',
       ground: 'Villa Park',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Villa_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Villa_Park_Front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Villa_Park_back.png'
+      },
       coordinates: '52°30\'48"N - 1°53\'42"W',
       colours: [
         { label: 'Claret', swatch: 'claret' },
@@ -497,6 +569,10 @@
       collection: 'current',
       ground: 'Vitality Stadium',
       image: 'assets/T-Shirts/Contemporary%20Grounds/Vitality_Stadium.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Contemporary/Vitality_Stadium_front.png',
+        back: 'assets/T-Shirts/Single/Contemporary/Vitality_Stadium_back.png'
+      },
       coordinates: '50°44\'06"N - 1°50\'49"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -508,6 +584,10 @@
       collection: 'heritage',
       ground: 'Boothferry Park',
       image: 'assets/T-Shirts/Heritage%20Grounds/Boothferry_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Bootheferry_Park_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Bootheferry_Park_back.png'
+      },
       coordinates: '53°44\'18"N - 0°23\'56"W',
       colours: [
         { label: 'Amber', swatch: 'amber' },
@@ -519,6 +599,10 @@
       collection: 'heritage',
       ground: 'Goldstone Ground',
       image: 'assets/T-Shirts/Heritage%20Grounds/Goldstone_Ground.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Goldstone_Ground_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Goldstone_Ground_back.png'
+      },
       coordinates: '50°50\'22"N - 0°10\'12"W',
       colours: [
         { label: 'Royal Blue', swatch: 'royal' },
@@ -530,6 +614,10 @@
       collection: 'heritage',
       ground: 'Goodison Park',
       image: 'assets/T-Shirts/Heritage%20Grounds/Goodison_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Goodison_Park_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Goodison_Park_back.png'
+      },
       coordinates: '53°26\'16"N - 2°57\'59"W',
       colours: [
         { label: 'Royal Blue', swatch: 'royal' },
@@ -541,6 +629,10 @@
       collection: 'heritage',
       ground: 'Griffin Park',
       image: 'assets/T-Shirts/Heritage%20Grounds/Griffin_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Griffin_Park_Front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Griffin_Park_back.png'
+      },
       coordinates: '51°29\'31"N - 0°18\'05"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -552,6 +644,10 @@
       collection: 'heritage',
       ground: 'Highbury',
       image: 'assets/T-Shirts/Heritage%20Grounds/Highbury.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Highbury_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Highbury_back.png'
+      },
       coordinates: '51°33\'29"N - 0°06\'29"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -563,6 +659,10 @@
       collection: 'heritage',
       ground: 'Highfield Road',
       image: 'assets/T-Shirts/Heritage%20Grounds/Highfield_Road.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Highfield_Road_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Highfield_Road_back.png'
+      },
       coordinates: '52°24\'13"N - 1°30\'29"W',
       colours: [
         { label: 'Sky Blue', swatch: 'sky' },
@@ -574,6 +674,10 @@
       collection: 'heritage',
       ground: 'Maine Road',
       image: 'assets/T-Shirts/Heritage%20Grounds/Maine_Road.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Maine_Road_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Maine_Road_back.png'
+      },
       coordinates: '53°27\'46"N - 2°12\'02"W',
       colours: [
         { label: 'Sky Blue', swatch: 'sky' },
@@ -585,6 +689,10 @@
       collection: 'heritage',
       ground: 'Roker Park',
       image: 'assets/T-Shirts/Heritage%20Grounds/Roker_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Roker_Park_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Roker_Park_back.png'
+      },
       coordinates: '54°55\'21"N - 1°22\'56"W',
       colours: [
         { label: 'Red', swatch: 'red' },
@@ -596,6 +704,10 @@
       collection: 'heritage',
       ground: 'Upton Park',
       image: 'assets/T-Shirts/Heritage%20Grounds/Upton_Park.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/Upton_Park_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/Upton_Park_back.png'
+      },
       coordinates: '51°31\'52"N - 0°02\'16"E',
       colours: [
         { label: 'Claret', swatch: 'claret' },
@@ -607,6 +719,10 @@
       collection: 'heritage',
       ground: 'White Hart Lane',
       image: 'assets/T-Shirts/Heritage%20Grounds/White_Hart_Lane.png',
+      mobileImages: {
+        front: 'assets/T-Shirts/Single/Heritage/White_Hart_Lane_front.png',
+        back: 'assets/T-Shirts/Single/Heritage/White_Hart_Lane_back.png'
+      },
       coordinates: '51°36\'16"N - 0°03\'58"W',
       colours: [
         { label: 'Navy', swatch: 'navy' },
